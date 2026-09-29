@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-base: #0a0a0f;
+    --surface-base: #111118;
+    --card-base: #16161f;
+    --border-base: #2a2a3a;
+    --accent-violet: #7c5cfc;
+    --accent-mint: #00e5b0;
+    --accent-coral: #ff6b6b;
+  }
+
+  body {
+    background-color: var(--bg-base);
+    color: #e8e8f0;
+    font-family: 'Syne', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0a0f;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2a3a;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #7c5cfc;
+  }
+}
+
+.font-syne {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-mono-code {
+  font-family: 'DM Mono', monospace;
+}
+
+.font-body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Background grid pattern */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(124, 92, 252, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 92, 252, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(124, 92, 252, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Card hover glow */
+.card-glow-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-glow-hover:hover {
+  border-color: rgba(124, 92, 252, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(124, 92, 252, 0.2);
+  transform: translateY(-3px);
+}
